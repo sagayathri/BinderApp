@@ -3,7 +3,7 @@
 
   This is a code bundle for Binder App. The original project is available at https://www.figma.com/design/ft8utDhkWg1rTAb92LDABO/Binder-App.
 
-# App Architecture 
+  ## App Architecture 
   +-------------------------------------------------------------------+
 |                       Presentation Layer (App Module)             |
 |                                                                   |
@@ -42,6 +42,7 @@
 |                 +-----------------+     +-------------------+     |
 |                                                                   |
 +-------------------------------------------------------------------+
+
 
   ## Running the code
 
