@@ -117,6 +117,13 @@ export default function App() {
     setShowRegister(false);
   };
 
+  const handleBackToHomeFromProfile = () => {
+    setIsAuthenticated(false);
+    setNeedsProfileSetup(false);
+    setRegistrationData(null);
+    setIsEditingProfile(false);
+  };
+
   const handleGoToRegister = () => {
     setShowSignIn(false);
     setShowRegister(true);
@@ -204,6 +211,7 @@ export default function App() {
     return (
       <BusinessProfileSetup 
         onComplete={isEditingProfile ? handleProfileUpdate : handleProfileComplete}
+        onBackToHome={!isEditingProfile ? handleBackToHomeFromProfile : undefined}
         initialData={registrationData || undefined}
       />
     );

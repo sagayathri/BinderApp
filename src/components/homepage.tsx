@@ -334,6 +334,21 @@ export function HomePage({
                           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
                             {slide.description}
                           </p>
+                          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                            <Button
+                              onClick={onRegister}
+                              size="lg"
+                            >
+                              Create Account
+                            </Button>
+                            <Button
+                              onClick={onLogin}
+                              variant="outline"
+                              size="lg"
+                            >
+                              Sign In
+                            </Button>
+                          </div>
                         </div>
                       </CardContent>
                     </Card>

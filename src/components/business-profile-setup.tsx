@@ -75,6 +75,7 @@ interface UserProfile {
 
 interface BusinessProfileSetupProps {
   onComplete: (profile: UserProfile) => void;
+  onBackToHome?: () => void;
   initialData?: {
     name: string;
     email: string;
@@ -395,6 +396,7 @@ const defaultBusinessHours = {
 
 export function BusinessProfileSetup({
   onComplete,
+  onBackToHome,
   initialData,
 }: BusinessProfileSetupProps) {
   const [currentTab, setCurrentTab] = useState("basic");
@@ -653,6 +655,17 @@ export function BusinessProfileSetup({
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
       <div className="max-w-2xl mx-auto pt-8">
+        {onBackToHome && (
+          <div className="mb-4">
+            <Button
+              variant="ghost"
+              onClick={onBackToHome}
+              className="hover:bg-white/20"
+            >
+              ← Back to Home
+            </Button>
+          </div>
+        )}
         <Card>
           <CardHeader>
             <CardTitle className="text-center flex items-center justify-center gap-2">
